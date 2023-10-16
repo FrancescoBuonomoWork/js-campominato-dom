@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mt-60{
+    margin-top: 60px;
+}
+
+.container{
+    max-width:1000px;
+    margin: 0 auto;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cell{
+    aspect-ratio: 1;
+    border: 1px solid black;
+    width: calc(100% / 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell.cell-normale{
+    width: calc(100% / 9);
+}
+.cell.cell-difficile{
+    width: calc(100% / 7);
+}
+
+.bg-lightblue{
+    background-color: lightblue;
+}
