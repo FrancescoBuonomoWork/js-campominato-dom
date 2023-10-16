@@ -11,6 +11,10 @@ console.log(selectDOMElement.value);
 //     console.log(selectOptionDOMElement);
 
 // }
+let countDOMElement = document.getElementById("count");
+console.log(countDOMElement);
+
+let score = 0;
 
 let bombs = [];
 
@@ -54,18 +58,24 @@ playButtonDOMElement.addEventListener("click", function () {
             // currentCellDOMElement.classList.add("bg-lightblue");
             
             const targetCell = event.target;
-            console.log(targetCell);
+            // console.log(targetCell);
             const targetNumber = parseInt(targetCell.innerHTML);
-            console.log(bombs.includes(targetNumber));
-            
-            if (targetNumber === bombs.includes(targetNumber))  {
+            // console.log(bombs.includes(targetNumber));
+            // console.log(targetNumber , bombs.includes());
+            if (bombs.includes(targetNumber) === true)  {
                 // currentCellDOMElement.classList.add("bg-red");
                 targetCell.classList.add("bg-red");
+                // console-log("hai perso");
+
     
                 
             } else {
                 // currentCellDOMElement.classList.add("bg-lightblue");
                 targetCell.classList.add("bg-lightblue");
+                // targetCell.classList.add("bg-red");
+                score = score + 1;
+                countDOMElement.innerHTML = score;
+            
             }
             console.log(bombs.includes(targetNumber));         
         })
