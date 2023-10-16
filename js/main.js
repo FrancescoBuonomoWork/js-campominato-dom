@@ -25,8 +25,12 @@ playButtonDOMElement.addEventListener("click", function () {
         console.log(bombs);
     } else if (selectDOMElement.value === "normale") {
         createGridElements(9 * 9, "cell-normale");
+        const bombs = getArrayOfNumbersBetween(1,(9 * 9),16);
+        console.log(bombs);
     } else if (selectDOMElement.value === "difficile") {
         createGridElements(7 * 7, "cell-difficile");
+        const bombs = getArrayOfNumbersBetween(1,(7 * 7),16);
+        console.log(bombs);
     }
 
 
@@ -54,10 +58,9 @@ function getArrayOfNumbersBetween(rangeMin, rangeMax, number) {
     if(bombsArray.includes(n) === false)    
         bombsArray.push(n);
     }
-    console.log(bombsArray);
+    return bombsArray;
+    // console.log(bombsArray);
 }
-
-
 
 // funzione per generare numeri random 
 function getRandomInt(min, max) {
