@@ -12,11 +12,12 @@ console.log(selectDOMElement.value);
 
 // }
 
+let bombs = [];
 
 playButtonDOMElement.addEventListener("click", function () {
-    
-    
-    const bombs = getArrayOfNumbersBetween(1,100,16);
+
+
+    bombs = getArrayOfNumbersBetween(1, 100, 16);
     console.log(bombs);
     // if (bombs === cellDOMElements ) {
 
@@ -28,7 +29,7 @@ playButtonDOMElement.addEventListener("click", function () {
         // const bombs = getArrayOfNumbersBetween(1,100,16);
         // console.log(bombs);
 
-        
+
 
     } else if (selectDOMElement.value === "normale") {
         createGridElements(9 * 9, "cell-normale");
@@ -47,28 +48,39 @@ playButtonDOMElement.addEventListener("click", function () {
         const currentCellDOMElement = cellDOMElements[i];
         // console.log(currentCellDOMElement);
 
-        currentCellDOMElement.addEventListener("click", function () {
-            // currentCellDOMElement.classList.add("bg-lightblue");
-            console.log(currentCellDOMElement);
-            console.log(bombs.includes());
-            if (bombs.includes(bombs) === cellDOMElements) {
-                currentCellDOMElement.classList.add("bg-red");
-                console.log(bombs.includes(bombs));
-            }
+        
+        currentCellDOMElement.addEventListener("click", function (event) {
 
+            // currentCellDOMElement.classList.add("bg-lightblue");
+            
+            const targetCell = event.target;
+            console.log(targetCell);
+            const targetNumber = parseInt(targetCell.innerHTML);
+            console.log(bombs.includes(targetNumber));
+            if (targetNumber === bombs.includes(targetNumber))  {
+                // currentCellDOMElement.classList.add("bg-red");
+                targetCell.classList.add("bg-red");
+    
+                
+            } else {
+                // currentCellDOMElement.classList.add("bg-lightblue");
+                targetCell.classList.add("bg-lightblue");
+            }         
         })
+        
     }
- 
-   
+
+
 })
+
 
 function getArrayOfNumbersBetween(rangeMin, rangeMax, number) {
     const bombsArray = [];
     while (bombsArray.length < number) {
         const n = getRandomInt(rangeMin, rangeMax);
         // console.log(bombsArray.includes(n));
-    if(bombsArray.includes(n) === false)    
-        bombsArray.push(n);
+        if (bombsArray.includes(n) === false)
+            bombsArray.push(n);
     }
     return bombsArray;
     // console.log(bombsArray);
