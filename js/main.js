@@ -17,8 +17,8 @@ let bombs = [];
 playButtonDOMElement.addEventListener("click", function () {
 
 
-    bombs = getArrayOfNumbersBetween(1, 100, 16);
-    console.log(bombs);
+    // bombs = getArrayOfNumbersBetween(1, 100, 16);
+    // console.log(bombs);
     // if (bombs === cellDOMElements ) {
 
     // }
@@ -26,19 +26,19 @@ playButtonDOMElement.addEventListener("click", function () {
     // gridDOMElement.innerHTML = "";
     if (selectDOMElement.value === "facile") {
         createGridElements(100);
-        // const bombs = getArrayOfNumbersBetween(1,100,16);
-        // console.log(bombs);
+        bombs = getArrayOfNumbersBetween(1,100,16);
+        console.log(bombs);
 
 
 
     } else if (selectDOMElement.value === "normale") {
         createGridElements(9 * 9, "cell-normale");
-        // const bombs = getArrayOfNumbersBetween(1,(9 * 9),16);
-        // console.log(bombs);
+        bombs = getArrayOfNumbersBetween(1,(9 * 9),16);
+        console.log(bombs);
     } else if (selectDOMElement.value === "difficile") {
         createGridElements(7 * 7, "cell-difficile");
-        // const bombs = getArrayOfNumbersBetween(1,(7 * 7),16);
-        // console.log(bombs);
+        bombs = getArrayOfNumbersBetween(1,(7 * 7),16);
+        console.log(bombs);
     }
 
     const cellDOMElements = document.querySelectorAll(".cell");
