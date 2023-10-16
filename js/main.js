@@ -57,6 +57,7 @@ playButtonDOMElement.addEventListener("click", function () {
             console.log(targetCell);
             const targetNumber = parseInt(targetCell.innerHTML);
             console.log(bombs.includes(targetNumber));
+            
             if (targetNumber === bombs.includes(targetNumber))  {
                 // currentCellDOMElement.classList.add("bg-red");
                 targetCell.classList.add("bg-red");
@@ -65,7 +66,8 @@ playButtonDOMElement.addEventListener("click", function () {
             } else {
                 // currentCellDOMElement.classList.add("bg-lightblue");
                 targetCell.classList.add("bg-lightblue");
-            }         
+            }
+            console.log(bombs.includes(targetNumber));         
         })
         
     }
