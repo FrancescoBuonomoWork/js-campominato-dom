@@ -78,6 +78,7 @@ playButtonDOMElement.addEventListener("click", function () {
                 targetCell.classList.add("pointer-none");
                 score = score + 1;
                 countDOMElement.innerHTML = score;
+                
             
             }
             console.log(bombs.includes(targetNumber));         
