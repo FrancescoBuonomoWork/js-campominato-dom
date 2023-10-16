@@ -16,24 +16,28 @@ console.log(selectDOMElement.value);
 playButtonDOMElement.addEventListener("click", function () {
     
     
-    
+    const bombs = getArrayOfNumbersBetween(1,100,16);
+    console.log(bombs);
+    // if (bombs === cellDOMElements ) {
+
+    // }
     // resettiamo la griglia 
     // gridDOMElement.innerHTML = "";
     if (selectDOMElement.value === "facile") {
         createGridElements(100);
-        const bombs = getArrayOfNumbersBetween(1,100,16);
-        console.log(bombs);
+        // const bombs = getArrayOfNumbersBetween(1,100,16);
+        // console.log(bombs);
 
         
 
     } else if (selectDOMElement.value === "normale") {
         createGridElements(9 * 9, "cell-normale");
-        const bombs = getArrayOfNumbersBetween(1,(9 * 9),16);
-        console.log(bombs);
+        // const bombs = getArrayOfNumbersBetween(1,(9 * 9),16);
+        // console.log(bombs);
     } else if (selectDOMElement.value === "difficile") {
         createGridElements(7 * 7, "cell-difficile");
-        const bombs = getArrayOfNumbersBetween(1,(7 * 7),16);
-        console.log(bombs);
+        // const bombs = getArrayOfNumbersBetween(1,(7 * 7),16);
+        // console.log(bombs);
     }
 
     const cellDOMElements = document.querySelectorAll(".cell");
@@ -44,14 +48,18 @@ playButtonDOMElement.addEventListener("click", function () {
         // console.log(currentCellDOMElement);
 
         currentCellDOMElement.addEventListener("click", function () {
-            currentCellDOMElement.classList.add("bg-lightblue");
+            // currentCellDOMElement.classList.add("bg-lightblue");
             console.log(currentCellDOMElement);
-
+            console.log(bombs.includes());
+            if (bombs.includes(bombs) === cellDOMElements) {
+                currentCellDOMElement.classList.add("bg-red");
+                console.log(bombs.includes(bombs));
+            }
 
         })
     }
-    // console.log(bombs);
-    // if (bombs ===)
+ 
+   
 })
 
 function getArrayOfNumbersBetween(rangeMin, rangeMax, number) {
