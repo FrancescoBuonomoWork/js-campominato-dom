@@ -23,6 +23,9 @@ playButtonDOMElement.addEventListener("click", function () {
         createGridElements(100);
         const bombs = getArrayOfNumbersBetween(1,100,16);
         console.log(bombs);
+
+        
+
     } else if (selectDOMElement.value === "normale") {
         createGridElements(9 * 9, "cell-normale");
         const bombs = getArrayOfNumbersBetween(1,(9 * 9),16);
@@ -32,7 +35,6 @@ playButtonDOMElement.addEventListener("click", function () {
         const bombs = getArrayOfNumbersBetween(1,(7 * 7),16);
         console.log(bombs);
     }
-
 
     const cellDOMElements = document.querySelectorAll(".cell");
     // console.log(cellDOMElements);
@@ -48,6 +50,8 @@ playButtonDOMElement.addEventListener("click", function () {
 
         })
     }
+    // console.log(bombs);
+    // if (bombs ===)
 })
 
 function getArrayOfNumbersBetween(rangeMin, rangeMax, number) {

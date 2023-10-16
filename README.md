@@ -27,11 +27,14 @@
         - SE il numero genrato e gia stato generato non lo aggiungiamo all'array
 
 
-			// - SE il numero della casella è presente nell'array di bombe
-			// - aggiungialo la classe bg-red
-			// - game over
-			// - ALTRIMENTI
-			// - incrementiamo il punteggio
-			// - aggiungo la classe bg-blue
-			// - SE utente ha vinto
-			// - stampiamo hai vinto con il punteggio
+
+# bombe
+
+// - SE il numero della casella è presente nell'array di bombe
+// - aggiungialo la classe bg-red
+// - game over
+// - ALTRIMENTI
+// - incrementiamo il punteggio
+// - aggiungo la classe bg-blue
+// - SE utente ha vinto
+// - stampiamo hai vinto con il punteggio
