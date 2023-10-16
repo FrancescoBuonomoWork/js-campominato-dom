@@ -16,4 +16,13 @@
 - ALTRIMENTI SE la select selezionata è "normale"
     - generare un altro codice con valori diversi del ciclo(i) e classi differenti(per gestire lo spazio occupato)
 - ALTRIMENTI SE  la select selezionata è "difficile"
-    - generare un altro codice con valori diversi del ciclo(i) e classi differenti(per gestire lo spazio occupato)         
+    - generare un altro codice con valori diversi del ciclo(i) e classi differenti(per gestire lo spazio occupato)
+
+## Array di numeri che poi saranno le bombe
+- copiamo la funzione per generare un numero random
+- creamo una funzione a cui possiamo assegnare tre valori: i primi due per il range tra cui puo trovare i numeri e il terzo il numero di elementi di cui deve essere composto questo array di numeri
+    - creamo un array vuoto
+    - attraverso un ciclo WHILE/FINCHE  aggiungiamo numeri finche non ne abbiamo 16 
+        - ogni numero che viene generato viene aggiunto all'array
+        - SE il numero genrato e gia stato generato non lo aggiungiamo all'array
+        
