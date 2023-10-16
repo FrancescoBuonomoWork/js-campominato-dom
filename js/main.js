@@ -14,12 +14,13 @@ console.log(selectDOMElement.value);
 let countDOMElement = document.getElementById("count");
 console.log(countDOMElement);
 
-let score = 0;
+
 
 let bombs = [];
 
 playButtonDOMElement.addEventListener("click", function () {
 
+    let score = 0;
 
     // bombs = getArrayOfNumbersBetween(1, 100, 16);
     // console.log(bombs);
@@ -66,13 +67,15 @@ playButtonDOMElement.addEventListener("click", function () {
                 // currentCellDOMElement.classList.add("bg-red");
                 targetCell.classList.add("bg-red");
                 // console-log("hai perso");
-
+                // gridDOMElement.classList.add("pointer-none");
+                // alert("hai perso");
     
                 
             } else {
                 // currentCellDOMElement.classList.add("bg-lightblue");
                 targetCell.classList.add("bg-lightblue");
                 // targetCell.classList.add("bg-red");
+                targetCell.classList.add("pointer-none");
                 score = score + 1;
                 countDOMElement.innerHTML = score;
             

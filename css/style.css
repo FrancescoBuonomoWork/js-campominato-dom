@@ -38,3 +38,7 @@
 .bg-lightblue{
     background-color: lightblue;
 }
+
+.pointer-none{
+    pointer-events: none;
+}
